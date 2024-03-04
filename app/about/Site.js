@@ -3,26 +3,36 @@ import { useState,useEffect } from "react"
 
 export default function Site()
 {
-   let [fade,setFade]=useState(['start','start','start'])
+   let [fade,setFade]=useState(['start','start','start','start'])
   
    useEffect(()=>{
         setTimeout(()=>{
-          setFade(['end','start','start'])
+          setFade(['end','start','start','start'])
         },100)
 
         setTimeout(()=>{
-            setFade(['end','end','start'])
+            setFade(['end','end','start','start'])
           },500)
 
           setTimeout(()=>{
-            setFade(['end','end','end'])
+            setFade(['end','end','end','start'])
           },1000)
+
+          setTimeout(()=>{
+            setFade(['end','end','end','end'])
+          },1500)
    },[])
    
 
     return(
+        <>
+        <div className="about-left">
+        <img src="/pic1.jpg" className={"about-img "+fade[0]}></img>
+        </div>
+      
+
         <div className="about-site">
-                <div className={"about-site-part1 "+fade[0]}>
+                <div className={"about-site-part1 "+fade[1]}>
                     <h3>
                         소개
                     </h3>
@@ -33,7 +43,7 @@ export default function Site()
                 </div>
 
                 <div className="about-site-part2">
-                    <div className={"part2-box "+fade[1]}>
+                    <div className={"part2-box "+fade[2]}>
                         <div className="part2-inner">
 
                         
@@ -44,7 +54,7 @@ export default function Site()
                         </p>
                         </div>
                     </div>
-                    <div className={"part2-box "+fade[2]}>
+                    <div className={"part2-box "+fade[3]}>
                         <div className="part2-inner">
                         <h3>기술 스택</h3> 
                         <p>
@@ -59,5 +69,6 @@ export default function Site()
                 </div>
                
             </div>
+            </>
     )
 }

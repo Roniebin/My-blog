@@ -16,7 +16,8 @@ export default async function post()
           
            <h3>자유 게시판</h3><Link href="/post/postwrite" className="post-writing">글쓰기</Link>
            </div> 
-          <Posting result={result}/>
+
+          <Posting result={result} />
 
           
            

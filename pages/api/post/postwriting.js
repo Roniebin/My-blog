@@ -6,6 +6,7 @@ import { authOptions } from "../auth/[...nextauth]";
 export default async function handler(요청,응답)
 {
   
+    
     if (요청.method=="POST")
     {
        
@@ -33,7 +34,7 @@ export default async function handler(요청,응답)
                 console.log(year + '/' + month + '/' + date +" "+ hours + ':' + minutes) 
                 let theTime=year + '/' + month + '/' + date +" "+ hours + ':' + minutes
               
-                let Data={ name:session.user.name ,title:요청.body.title,date:theTime,content:요청.body.content}
+                let Data={ name:session.user.name ,title:요청.body.title,date:theTime,content:요청.body.content,author:session.user.email}
                 await db.collection("post").insertOne(Data)
 
                 응답.status(200).redirect('/post')

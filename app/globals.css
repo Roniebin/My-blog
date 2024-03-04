@@ -21,22 +21,32 @@ div{
   padding:10px;
 }
 
+.btn{
+  width:90px;
+  height:30px;
+  color:white;
+  border-radius:10px;
+  border:none;
+  background-color: green;
+
+}
 .navbar a{
   display:inline-block;
   color:white;
   text-decoration: none;
-  width:17%;
+  width:25%;
   text-align: center;
 }
 
 .login-btn{
-  width:15%;
-  background-color: #222;
-  border: white 1px solid;
-  color:white;
+  width:70px;
+  font-size:14px;
+  height:30px;
+  border:none;
   cursor:pointer;
-  
-
+  font-weight:800;
+  background: rgb(249, 250, 255);
+  padding:0px;
 }
 .main-container{
   width:100%;
@@ -44,6 +54,19 @@ div{
   max-width:1500px;
   margin-left:auto;
   margin-right: auto;
+}
+
+.main-login{
+  width:100%;
+  text-align:right;
+}
+.main-container a{
+  text-decoration: none;
+  font-weight: 600;
+  font-size:14px;
+  color:black;
+  border-left:black 1px solid;
+  padding:10px;
 }
 
 .maximum-width{
@@ -75,7 +98,7 @@ div{
 }
 .about-img{
   width:90%;
-  height:90%;
+  height:100%;
   border-radius: 10px;
 }
 
@@ -124,12 +147,14 @@ div{
 }
 
 .posting{
+  width:100%;
   background: white;
   border-radius: 10px;
   padding: 10px;
   padding-left: 20px;
   margin-bottom: 10px;
   box-shadow: rgb(224, 224, 224) 0px 2px 4px 0px;
+
 }
 
 .posting-author{
@@ -140,15 +165,29 @@ div{
   color:grey ;
   font-size:10px;
 }
+.posting-delete{
+  width:100%;
+  height:auto;
+}
+
+.posting-delete :nth-child(3){
+  margin-top:10px;
+}
 
 .post-title {
   width:100%
 }
 
+.posting-content{
+  text-decoration: none;
+  font-weight: 400;
+  color: inherit;
+}
 .post-container h3{
   display:inline-block;
   width:85%;
 }
+
 
 .post-writing{
   
@@ -159,6 +198,44 @@ div{
   margin-bottom:10px;
  
 }
+
+.postdetail-container{
+  width:80%;
+  height: auto !important;
+  margin-left:auto;
+  margin-right: auto;
+  padding:20px;
+}
+
+
+.detail-content{
+  width:100%;
+  height: auto;
+  font-weight:800;
+  padding:5px;
+  font-size:14px;
+  border:grey solid 1px;
+  border-radius: 10px;
+  margin-bottom:20px;
+  padding-left:20px;
+}
+
+.detail-comment{
+    width:100%;
+    height:auto;
+    padding:20px;
+}
+.detail-content :nth-child(2)
+{
+  color:grey;
+  font-size:10px;
+}
+
+.contentH{
+  height:300px;
+}
+
+
 
 /* ---------post */
 
@@ -190,6 +267,10 @@ div{
 {
   .about-container{
     display:block;
+  }
+
+  .main-login{
+    text-align:left;
   }
 
   .about-site{
