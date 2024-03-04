@@ -22,7 +22,7 @@ export default async function handler(요청,응답)
             if(post.author==session.user.email || session.user.email=="admin@naver.com")
             {
                 await db.collection("post").deleteOne({_id:new ObjectId(요청.body)})
-                응답.status(200).json("삭제완료")
+                응답.status(200).redirect("/post")
             }
         }else{
             응답.status(200).json("삭제 권한이 없습니다.")

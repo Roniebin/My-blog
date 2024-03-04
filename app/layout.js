@@ -39,7 +39,7 @@ export default async function RootLayout({ children }) {
         <div className="main-banner maximum-width">
           <div className="main-login">
           {
-            session ? <LogoutBtn/> : <LoginBtn/>
+            session ? <LogoutBtn name={session.user.name}/> : <LoginBtn/>
           }
           {
             session ? null : <Signup/>

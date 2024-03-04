@@ -1,10 +1,18 @@
+@font-face {
+  font-family: 'SOYOMapleBoldTTF';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/SOYOMapleBoldTTF.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
 body{
   margin:0px;
   background: rgb(249, 250, 255);
+  
 }
 
 div{
   box-sizing: border-box;
+  font-family:  'SOYOMapleBoldTTF';
 }
 
 .m-font{
@@ -107,7 +115,10 @@ div{
   text-align: left;
   width:50%;
   height:100%;
-  
+}
+
+.about-site h3{
+  color:brown
 }
 .about-site-part1{
   border-bottom: black solid 1px;
@@ -154,7 +165,7 @@ div{
   padding-left: 20px;
   margin-bottom: 10px;
   box-shadow: rgb(224, 224, 224) 0px 2px 4px 0px;
-
+  transition : all 1s;
 }
 
 .posting-author{
@@ -165,10 +176,7 @@ div{
   color:grey ;
   font-size:10px;
 }
-.posting-delete{
-  width:100%;
-  height:auto;
-}
+
 
 .posting-delete :nth-child(3){
   margin-top:10px;
@@ -284,5 +292,12 @@ div{
   }
   .part2-box{
     width:100%;
+  }
+
+  .part2-inner{
+    display:flex;
+  }
+  .part2-inner div{
+    width:50%;
   }
 }
