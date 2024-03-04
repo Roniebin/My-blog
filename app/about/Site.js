@@ -4,7 +4,7 @@ import { useState,useEffect } from "react"
 export default function Site()
 {
    let [fade,setFade]=useState(['start','start','start'])
-
+  
    useEffect(()=>{
         setTimeout(()=>{
           setFade(['end','start','start'])
