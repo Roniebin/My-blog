@@ -1,4 +1,3 @@
-'use client'
 
 export default function Postwrite(props) {
 
@@ -13,11 +12,11 @@ export default function Postwrite(props) {
             <form action="/api/post/postwriting" method="POST">
                 <p>제목 : <input name="title" type="text"></input></p>
                 <hr></hr>
-                <p>내용<br/><br/><textarea name="content"cols="80" rows="10"></textarea></p>
+                <p>내용<br /><br /><textarea name="content" cols="80" rows="10"></textarea></p>
                 <p><button className="btn" type="submit">완료</button></p>
-                
-                
-               
+
+
+
             </form>
 
         </div>

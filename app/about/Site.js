@@ -43,15 +43,13 @@ export default function Site() {
 
                 <div className="about-site-part2">
                     <div className={"part2-box " + fade[2]}>
-                    <h3>고려한 기능</h3>
+                        <h3>고려한 기능</h3>
                         <div className="part2-inner">
 
-
-                        
                             <div>
-                                * 프론트<br /> 동적 이벤트 처리,<br />동적 UI,  다크모드 
+                                * 프론트<br /> 동적 이벤트 처리,<br />동적 UI,  다크모드
                             </div>
-                           <br/>
+                            <br />
                             <div>
                                 * 백엔드<br /> 로그인,회원기능, <br />글 조회 발행, 수정<br /> 삭제, 댓글, 좋아요
 
@@ -61,9 +59,9 @@ export default function Site() {
                         </div>
                     </div>
                     <div className={"part2-box " + fade[3]}>
-                    <h3>기술 스택</h3>
+                        <h3>기술 스택</h3>
                         <div className="part2-inner">
-                      
+
                             <p>
                                 * 프론트<br /> Html, Css, Javascript, React<br /><br />
                                 * 백엔드<br /> Next.js<br /><br />

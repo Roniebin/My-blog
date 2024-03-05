@@ -1,15 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import Like from "./Like";
+import { authOptions } from "@/pages/api/auth/[...nextauth]";
+import { getServerSession } from "next-auth"
 
-export default function Posting(props) {
+
+export default async function Posting(props) {
   let posting = props.result;
 
-
+  let session = await getServerSession(authOptions)
 
   return (
     <>
-
       {posting.map((item, i) => {
         return (
 
@@ -22,24 +25,24 @@ export default function Posting(props) {
 
             <hr></hr>
 
-            <span>👍</span> <span>0</span>
-
-
-            <div onClick={(e) => {
+            <Like parentId={posting[i]._id}/>
+            <br/>
+            <span onClick={(e) => {
               fetch('/api/post/postdelete', { method: "delete", body: posting[i]._id })
-                .then((r) => { return r.json})
+                .then((r) => { return r.json })
                 .then(() => {
-                  e.target.parentElement.style.opacity=0;
+                  e.target.parentElement.style.opacity = 0;
 
                   setTimeout(() => {
                     e.target.parentElement.style.display = "none"
                   }, 1000)
                 })
 
-            }} style={{ cursor: "pointer", backgroundColor: "white", color: "red",marginTop:"7px" }}>삭제</div>
+            }} style={{ cursor: "pointer", backgroundColor: "white", color: "red", marginTop: "7px" }}>삭제</span>
 
-
-
+          
+          
+          
 
           </div>
         )

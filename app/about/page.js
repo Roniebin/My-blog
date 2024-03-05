@@ -1,12 +1,11 @@
 import Site from "./Site"
 
-export default function about()
-{
-    return(
+export default function about() {
+    return (
         <div className="about-container maximum-width">
-     
-            <Site/>
-    
+
+            <Site />
+
         </div>
     )
 }

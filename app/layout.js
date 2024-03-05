@@ -4,7 +4,7 @@ import Link from "next/link";
 import LoginBtn from "./LoginBtn";
 import LogoutBtn from "./LogoutBtn";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
-import { getServerSession } from "next-auth" 
+import { getServerSession } from "next-auth"
 import Signup from "./Signup";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -23,37 +23,37 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        
+
         <div className="navbar" >
-          
-          <Link href='/about' style={{fontWeight:"bold"}}>SSblog</Link>
-          
+
+          <Link href='/about' style={{ fontWeight: "bold" }}>SSblog</Link>
+
           <Link href='/about'>소개</Link>
-        
+
           <Link href='/routine'>글 포스팅</Link>
           <Link href='/post'>커뮤니티</Link>
 
         </div>
-      
+
         <div className="main-container">
-        <div className="main-banner maximum-width">
-          <div className="main-login">
-          {
-            session ? <LogoutBtn name={session.user.name}/> : <LoginBtn/>
-          }
-          {
-            session ? null : <Signup/>
-          }
+          <div className="main-banner maximum-width">
+            <div className="main-login">
+              {
+                session ? <LogoutBtn name={session.user.name} /> : <LoginBtn />
+              }
+              {
+                session ? null : <Signup />
+              }
+            </div>
+            <h1>제 하루 일상루틴을 공유하는 블로그입니다.</h1>
+            <p style={{ color: "brown" }}>"Rome wasn't built in a day"</p>
           </div>
-          <h1>제 하루 일상루틴을 공유하는 블로그입니다.</h1>
-          <p style={{color:"brown"}}>"Rome wasn't built in a day"</p>
+
+
         </div>
 
-      
-   </div>
-
         {children}
-        </body>
+      </body>
     </html>
   );
 }
