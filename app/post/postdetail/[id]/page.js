@@ -1,6 +1,7 @@
 import { connectDB } from "@/util/database";
 import { ObjectId } from "mongodb"
 import Comment from "./comment";
+import Link from "next/link";
 
 export default async function Postdetail(props) {
     console.log(props.params.id);
@@ -8,7 +9,6 @@ export default async function Postdetail(props) {
     let client = await connectDB;
     const db = client.db('blog');
     let result = await db.collection('post').findOne({ _id: new ObjectId(props.params.id) })
-
 
     return (
         <div className="postdetail-container">
@@ -31,6 +31,7 @@ export default async function Postdetail(props) {
                 </p>
             </div>
 
+           
             <hr></hr>
 
             <Comment parentId={result._id.toString()} />

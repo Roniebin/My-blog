@@ -2,14 +2,9 @@
 
 import Link from "next/link";
 import Like from "./Like";
-import { authOptions } from "@/pages/api/auth/[...nextauth]";
-import { getServerSession } from "next-auth"
 
-
-export default async function Posting(props) {
+export default function Posting(props) {
   let posting = props.result;
-
-  let session = await getServerSession(authOptions)
 
   return (
     <>
@@ -40,9 +35,9 @@ export default async function Posting(props) {
 
             }} style={{ cursor: "pointer", backgroundColor: "white", color: "red", marginTop: "7px" }}>삭제</span>
 
+            <Link href={"/post/postedit/"+posting[i]._id} className="posteditbtn">수정</Link>
           
-          
-          
+        
 
           </div>
         )

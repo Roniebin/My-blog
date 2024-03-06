@@ -1,7 +1,7 @@
 import { connectDB } from "@/util/database";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../auth/[...nextauth]";
-
+import { ObjectId } from "mongodb";
 
 export default async function handler(요청, 응답) {
 
@@ -17,7 +17,7 @@ export default async function handler(요청, 응답) {
                 let client = await connectDB;
                 const db = client.db('blog');
 
-                console.log("여기")
+                console.log("여기ㅇㅇㅇㅇㅇ")
                 console.log(요청.body);
 
                 let today = new Date();
@@ -32,8 +32,12 @@ export default async function handler(요청, 응답) {
                 let theTime = year + '/' + month + '/' + date + " " + hours + ':' + minutes
 
                 let Data = { name: session.user.name, title: 요청.body.title, date: theTime, content: 요청.body.content, author: session.user.email}
-                await db.collection("post").insertOne(Data)
 
+                console.log(요청.body._id)
+                await db.collection('post').updateOne(
+                    {_id : new ObjectId(요청.body._id)},
+                    {$set: Data}
+                    )
                 응답.status(200).redirect('/post')
 
             } catch (error) {

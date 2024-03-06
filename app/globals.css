@@ -243,6 +243,12 @@ div{
   height:300px;
 }
 
+.posteditbtn{
+  margin-left:20px;
+  text-decoration: none;
+  color:inherit;
+  color:green;
+}
 
 
 /* ---------post */
