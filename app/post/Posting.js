@@ -2,9 +2,13 @@
 
 import Link from "next/link";
 import Like from "./Like";
+import { useState } from "react";
+
 
 export default function Posting(props) {
   let posting = props.result;
+
+  
 
   return (
     <>
@@ -20,25 +24,33 @@ export default function Posting(props) {
 
             <hr></hr>
 
-            <Like parentId={posting[i]._id}/>
-            <br/>
+            <Like parentId={posting[i]._id} />
+            <br />
+
+          {
+            props.name == item.name ?
             <span onClick={(e) => {
-              fetch('/api/post/postdelete', { method: "delete", body: posting[i]._id })
+              fetch('/api/post/postdelete', { method: "POST", body: posting[i]._id })
                 .then((r) => { return r.json })
                 .then(() => {
                   e.target.parentElement.style.opacity = 0;
-
-                  setTimeout(() => {
-                    e.target.parentElement.style.display = "none"
-                  }, 1000)
+                
+                    setTimeout(() => {
+                      e.target.parentElement.style.display = "none"
+                    }, 1000)
+                  
                 })
-
+    
             }} style={{ cursor: "pointer", backgroundColor: "white", color: "red", marginTop: "7px" }}>삭제</span>
+             : null
+          }
 
-            <Link href={"/post/postedit/"+posting[i]._id} className="posteditbtn">수정</Link>
+          {
+              props.name ==item.name ?<Link href={"/post/postedit/" + posting[i]._id} className="posteditbtn">수정</Link>
+              : null
+          }
+ 
           
-        
-
           </div>
         )
       })

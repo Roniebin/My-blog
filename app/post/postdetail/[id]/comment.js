@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 
+
 export default function Comment(props) {
     let [comment, setComment] = useState('')
     let [data, setData] = useState('')
@@ -38,7 +39,8 @@ export default function Comment(props) {
                         return (
                             <p>
                                 <span style={{ fontSize: "11px" }}> {a.author}</span><br />
-                                <span> {a.comment}</span>
+                             
+                             <span>{a.comment}</span>
 
                             </p>
                         )

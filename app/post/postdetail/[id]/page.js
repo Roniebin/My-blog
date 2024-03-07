@@ -27,7 +27,7 @@ export default async function Postdetail(props) {
                 </p>
                 <hr></hr>
                 <p>
-                    내용 : {result.content}
+                    내용 : <pre>{result.content}</pre>
                 </p>
             </div>
 
