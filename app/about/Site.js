@@ -26,7 +26,7 @@ export default function Site() {
     return (
         <>
             <div className="about-left">
-                <img src="/pic1.jpg" className={"about-img " + fade[0]}></img>
+                <img src="/증명사진.jpg" className={"about-img " + fade[0]}></img>
             </div>
 
 

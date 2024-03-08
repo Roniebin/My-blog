@@ -26,7 +26,7 @@ export default async function RootLayout({ children }) {
 
         <div className="navbar" >
 
-          <Link href='/about' style={{ fontWeight: "bold" }}>SSblog</Link>
+          <Link href='/' style={{ fontWeight: "bold" }}>SSblog</Link>
 
           <Link href='/about'>소개</Link>
 
