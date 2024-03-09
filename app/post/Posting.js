@@ -8,7 +8,7 @@ import { useState } from "react";
 export default function Posting(props) {
   let posting = props.result;
 
-  
+  let a;
 
   return (
     <>
