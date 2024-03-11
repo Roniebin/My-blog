@@ -26,30 +26,30 @@ export default function Posting(props) {
             <Like parentId={posting[i]._id} />
             <br />
 
-          {
-            props.name == item.name ?
-            <span onClick={(e) => {
-              fetch('/api/post/postdelete', { method: "POST", body: posting[i]._id })
-                .then((r) => { return r.json })
-                .then(() => {
-                  e.target.parentElement.style.opacity = 0;
-                
-                    setTimeout(() => {
-                      e.target.parentElement.style.display = "none"
-                    }, 1000)
-                  
-                })
-    
-            }} style={{ cursor: "pointer", backgroundColor: "white", color: "red", marginTop: "7px" }}>삭제</span>
-             : null
-          }
+            {
+              (props.name == item.name)|| (props.name=="admin") ?
+                <span onClick={(e) => {
+                  fetch('/api/post/postdelete', { method: "POST", body: posting[i]._id })
+                    .then((r) => { return r.json })
+                    .then(() => {
+                      e.target.parentElement.style.opacity = 0;
 
-          {
-              props.name ==item.name ?<Link href={"/post/postedit/" + posting[i]._id} className="posteditbtn">수정</Link>
-              : null
-          }
- 
-          
+                      setTimeout(() => {
+                        e.target.parentElement.style.display = "none"
+                      }, 1000)
+
+                    })
+
+                }} style={{ cursor: "pointer", backgroundColor: "white", color: "red", marginTop: "7px" }}>삭제</span>
+                : null
+            }
+
+            {
+              props.name == item.name ? <Link href={"/post/postedit/" + posting[i]._id} className="posteditbtn">수정</Link>
+                : null
+            }
+
+
           </div>
         )
       })
