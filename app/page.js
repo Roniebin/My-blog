@@ -6,16 +6,19 @@ export default function Home() {
       <div className="home-part1">
         <div className="overap">
           <img className="homeimg oa"src="/pic1.jpg" ></img>
-          <img className="homeimg ob"src="/pic1.jpg" ></img>
+          <span className="ob"></span>
         </div>
         <div className="overap">
           <img className="homeimg"src="/pic3.jpg" ></img>
+          <span className="ob"></span>
         </div>
         <div className="overap">
           <img className="homeimg"src="/pic4.jpg" ></img>
+          <span className="ob"></span>
         </div>
         <div className="overap">
           <img className="homeimg"src="/pic5.jpg" ></img>
+          <span className="ob"></span>
         </div>
 
 
