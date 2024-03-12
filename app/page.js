@@ -25,7 +25,11 @@ export default function Home() {
       </div>
       <div className="home-part2">
         <h2>소개 글 보러가기</h2>
-        <Link href='/about'>소개</Link>
+
+        <div className="tointro">
+          <Link href='/about'>소개</Link>
+        </div>
+        
       </div>
 
     </div>

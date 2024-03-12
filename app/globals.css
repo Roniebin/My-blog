@@ -113,7 +113,7 @@ div{
   display:block;
   background-color: black;
   opacity: 0.2;
-  transition: all 1s;
+
 }
 .home-part2{
   width:30%;
@@ -228,7 +228,44 @@ div{
   transition: all 1s;
 }
 
+.tointro{
+  width:100px;
+  height: 60px;
+  background: brown;
+  border-radius: 10px;
+  cursor: pointer;
+  display:flex;
+  justify-content: center;
+  align-items: center;
 
+  animation: changebtn;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-iteration-count:infinite;
+
+}
+
+.tointro a{
+  color:white;
+}
+
+
+
+@keyframes changebtn {
+  0%{
+    background: brown;
+  }
+  50%{
+    background-color: cornflowerblue;
+    border-radius: 50%;
+  }
+   
+  100%{
+    background: brown;
+
+  }
+  
+}
 /* -------------about */
 
 
