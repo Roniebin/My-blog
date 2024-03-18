@@ -428,6 +428,13 @@ div{
     text-align:left;
   }
 
+  .LogoutBtncontainer{
+    width:40%;
+  }
+  .navbar a{
+    width:18%;
+  }
+
   .about-site{
     width:100%;
   }
