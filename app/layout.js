@@ -30,22 +30,19 @@ export default async function RootLayout({ children }) {
 
           <Link href='/about'>소개</Link>
 
-          <Link href='/routine'>글 포스팅</Link>
-          <Link href='/post'>커뮤니티</Link>
-
-        </div>
-
-        <div className="main-container">
-          <div className="main-banner maximum-width">
-            <div className="main-login">
-              {
+          <Link href='/post'>글포스팅</Link>
+             {
                 session ? <LogoutBtn name={session.user.name} /> : <LoginBtn />
               }
               {
                 session ? null : <Signup />
               }
-            </div>
-            <h1>제 하루 일상루틴을 공유하는 블로그입니다.</h1>
+        </div>
+
+        <div className="main-container">
+          <div className="main-banner maximum-width">
+           
+            <h1>하루 일상루틴을 공유하는 블로그입니다.</h1>
             <p style={{ color: "brown" }}>"Rome wasn't built in a day"</p>
           </div>
 

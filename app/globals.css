@@ -52,15 +52,24 @@ div{
   text-align: center;
 }
 
+.LogoutBtncontainer{
+  width:25%;
+  display:inline-block;
+  text-align: center;
+}
+
+
 .login-btn{
   width:70px;
   font-size:14px;
+  margin-left:10px;
   height:30px;
   border:none;
   cursor:pointer;
   font-weight:800;
   background: rgb(249, 250, 255);
   padding:0px;
+  border-radius: 10px;
 }
 
 .home-container{
@@ -143,10 +152,7 @@ div{
   margin-right: auto;
 }
 
-.main-login{
-  width:100%;
-  text-align:right;
-}
+
 .main-container a{
   text-decoration: none;
   font-weight: 600;

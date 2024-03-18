@@ -17,7 +17,7 @@ export default async function post() {
     return (
         <div className="post-container maximum-width">
             <div className="post-title">
-                <h3>자유 게시판</h3><Link href="/post/postwrite" className="post-writing">글쓰기</Link>
+                <h3>글 포스팅</h3><Link href="/post/postwrite" className="post-writing">글쓰기</Link>
             </div>
 
             {
